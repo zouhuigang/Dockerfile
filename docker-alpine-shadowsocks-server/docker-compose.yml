@@ -1,0 +1,13 @@
+version: "2"
+services:
+    shadowsocks_server:
+        image: xxfaxy/alpine_shadowsocks_server
+        container_name: shadowsocks_server
+        ports:
+            - "1080:1080"
+        environment:
+            - SERVER_IP=0.0.0.0
+            - SERVER_PORT=1080
+            - SERVER_PASSWORD=pw2016
+            - SERVER_METHOD=aes-256-cfb
+            - SERVER_TIMEOUT=300

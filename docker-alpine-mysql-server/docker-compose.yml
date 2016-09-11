@@ -1,0 +1,11 @@
+version: "2"
+services:
+    mysql:
+        image: xxfaxy/alpine_mysql
+        container_name: alpine_mysql
+        ports:
+            - "3306:3306"
+        volumes:
+            - /data/mysql:/var/lib/mysql
+        environment:
+            - MYSQL_PASSWORD=1234
