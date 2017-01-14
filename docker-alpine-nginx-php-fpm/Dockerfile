@@ -2,6 +2,7 @@ FROM alpine:edge
 RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk update
 RUN apk upgrade
+RUN apk add curl
 RUN apk add nginx
 RUN apk add php7
 RUN apk add php7-dom
@@ -35,7 +36,7 @@ COPY php-fpm.conf /etc/php7/php-fpm.conf
 RUN ln -s /usr/bin/php7 /usr/bin/php
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
-EXPOSE 80 443 9000
+EXPOSE 80 443 9000 9001 9002 9003 9004 9005
 VOLUME "/app"
 WORKDIR "/app"
 CMD ["/run.sh"]
