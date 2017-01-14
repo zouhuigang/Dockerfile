@@ -1,4 +1,5 @@
 #!/bin/sh
+crond
 nginx &
 php-fpm7
 sleep 10
