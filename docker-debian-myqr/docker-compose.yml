@@ -1,0 +1,11 @@
+version: "2"
+services:
+    myqr:
+        image: hub.docker8.net/web/myqr
+        container_name: myqr
+        ports:
+            - "50001:50001"
+        environment:
+            - DOCKER_COLOR_QRCODE_URL=http://192.241.202.14:50001
+        volumes:
+            - /tmp:/app/temp
