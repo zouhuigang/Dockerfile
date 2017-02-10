@@ -1,0 +1,18 @@
+{
+    "name": "from",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "babel": "babel from -d to"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-cli": "^6.22.2",
+        "babel-core": "^6.22.1",
+        "babel-preset-es2015": "^6.22.0",
+        "babel-preset-react": "^6.22.0"
+    }
+}
