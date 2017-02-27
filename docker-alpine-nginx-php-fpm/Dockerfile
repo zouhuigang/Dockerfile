@@ -26,6 +26,7 @@ RUN apk add php7-phar
 RUN apk add php7-openssl
 RUN apk add php7-zip
 RUN apk add php7-ssh2
+RUN apk add php7-zlib
 RUN apk add tzdata
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo "Asia/Shanghai" > /etc/timezone
