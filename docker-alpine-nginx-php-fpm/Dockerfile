@@ -33,6 +33,7 @@ RUN echo "Asia/Shanghai" > /etc/timezone
 RUN apk del tzdata
 RUN rm -rf /var/cache/apk/*
 RUN rm -rf /etc/nginx/conf.d/*
+COPY etc_resolv.conf /etc/resolv.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY php.ini /etc/php7/conf.d/50-setting.ini
 COPY php-fpm.conf /etc/php7/php-fpm.conf
