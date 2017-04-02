@@ -7,6 +7,7 @@ chmod a-w ${FTP_HOME}
 mkdir -p ${FTP_HOME}/${FTP_DATA_DIR}
 chmod 777 ${FTP_HOME}/${FTP_DATA_DIR}
 killall vsftpd
+chown root:root /etc/vsftpd -R
 /usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf &
 if [ -e /runAndInit.sh ];then /runAndInit.sh;fi
 tail -f /dev/null
